@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dadgutu4rcm5j"]
 
+[ext_resource type="Script" uid="uid://cgylklkopjepc" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://byebngxr072tn" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://5kuk8i5aw0o5" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bxe2pim6ghd6m" path="res://scenes/platform.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://c5l3q8xyqsaf1" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://yjgqacifxq5d" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://7cb3cctjc5xw" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://b5821wsqbhke5" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -203,6 +205,20 @@ _data = {
 
 [node name="Game" type="Node2D" unique_id=289109778]
 
+[node name="GameManager" type="Node" parent="." unique_id=1830860004]
+unique_name_in_owner = true
+script = ExtResource("1_gee14")
+
+[node name="ScoreLabel" type="Label" parent="GameManager" unique_id=524063214]
+offset_left = 649.0
+offset_top = 116.0
+offset_right = 883.0
+offset_bottom = 162.0
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 16
+text = "You've collected
+X Coins"
+
 [node name="TileMap" type="TileMap" parent="." unique_id=1459782904]
 tile_set = SubResource("TileSet_3vwvg")
 format = 2
@@ -303,3 +319,12 @@ position = Vector2(635, 162)
 
 [node name="Slime" parent="." unique_id=268331605 instance=ExtResource("6_p57ef")]
 position = Vector2(415, 69)
+
+[node name="Label" type="Label" parent="." unique_id=988059802]
+offset_left = -92.0
+offset_top = -18.0
+offset_right = 2.0
+offset_bottom = -3.0
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 7
+text = "Space To Jump"
