@@ -1,24 +1,37 @@
 # gogodude
 
-gogodude is a small 2D platformer made with Godot and GDscript. You explore a pixel-art level, jump between platforms, and collect coins while avoiding patrolling slimes.
+A small 2D platformer by [Prantik Pratim Medhi](https://prantikmedhi.itch.io/), built with Godot and GDScript.
 
-[Play in your browser on itch.io](https://prantikmedhi.itch.io/gogodude)
+Jump between platforms, collect coins, and watch out for slimes. If you fall, the level starts over and you can try again.
 
-## How to  play
+## Play
 
-Move through the level and pick up coins along the way. Watch where the slimes are heading before you jump. Landing on top of one defeats it and gives you a small bounce, but touching it from the side kills your character.
+[Play gogodude on itch.io](https://prantikmedhi.itch.io/gogodude)
 
-Falling off the level also sends you back to the start. The level restarts automatically, so you can try again without going through a menu.
+You can play in your browser. You don't need to download the game or install Godot.
 
 ## Controls
 
-- Left / Right arrows to move
-- Space to jump while on the ground
+- A / D or left / right arrow keys to move
+- Space to jump
 
-## Run locally
+## Open the project
 
-1. Clone or download this repository.
-2. Open Godot and import `project.godot`.
-3. Press `F5` to start the game.
+To run it from source or change the game:
 
-The project is configured for Godot 4.7, The main level is `platformergame.tscn`.
+1. Download or clone this repository.
+2. Import `project.godot` into Godot 4.7.
+3. Open the project and press F5.
+
+The level is in `scenes/game.tscn`. Movement, coin collection, and enemy behaviour are in `scripts/`.
+
+## Credits
+
+This game uses the [Brackeys' Platformer Bundle](https://brackeysgames.itch.io/brackeys-platformer-bundle). The pack includes assets from these creators:
+
+- Pixel art: analogStudios_ and RottingPixels
+- Music: Brackeys and Sofia Thirslund
+- Sound effects: Brackeys and Asbjørn Thirslund
+- Fonts: Jayvee Enaguas (HarvettFox96)
+
+The pack's assets are released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/), which allows anyone to use, modify, and share them, including in commercial games. Attribution isn't required, but the original creators deserve credit. This applies to the asset pack, not automatically to the game's code.
